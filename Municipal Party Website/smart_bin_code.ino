@@ -4,13 +4,13 @@
 #include "addons/RTDBHelper.h"
 
 /* ================= WiFi ================= */
-#define WIFI_SSID "Redmi"
-#define WIFI_PASSWORD "sudhir77999"
+#define WIFI_SSID "YOUR_WIFI_NAME"
+#define WIFI_PASSWORD "YOUR_WIFI_PASSWORD"
 
 /* ================= Firebase ================= */
-#define API_KEY "AIzaSyDryJIV2306OKfS88_eKBBDiCPHndFb_Fk"
-#define DATABASE_URL "wastesegragation-435e4-default-rtdb.firebaseio.com"
-#define FIREBASE_DB_SECRET "vJlPSUR5vk8ZCOwuCIXYdkRCMDwIG5ctqNEGfeWU"
+#define API_KEY "YOUR_API_KEY"
+#define DATABASE_URL "YOUR_DATABASE_URL"
+#define FIREBASE_DB_SECRET "YOUR_FIREBASE_DB_SECRET"
 
 /* ================= Ultrasonic Pins ================= */
 // Sensor 1

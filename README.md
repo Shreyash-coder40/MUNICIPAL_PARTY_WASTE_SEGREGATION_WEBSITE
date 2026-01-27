@@ -2,6 +2,28 @@
 
 **Eco-Command** is a smart, IoT-enabled dashboard for monitoring and managing municipal waste collection. It provides real-time tracking of waste collection fleets, monitors smart bin fill levels, and offers a multilingual interface for diverse municipal teams.
 
+## 🚧 Problem Statement
+
+Rapid urbanization has led to inefficient waste management systems characterized by:
+*   **Overflowing Bins**: Leading to health hazards and poor sanitation.
+*   **Inefficient Routing**: Collection trucks follow fixed routes regardless of bin fill levels, ensuring fuel and time wastage.
+*   **Lack of Visibility**: Authorities have no real-time tracking of where trucks are or which bins are missed.
+*   **Communication Gaps**: Language barriers between drivers and control centers often lead to operational delays.
+
+## 🎯 Gaps We Covered
+
+This project bridges key gaps in traditional waste management:
+*   **Live Monitoring vs. Static Schedules**: Transitioned from fixed daily pickups to dynamic, data-driven dispatching based on real-time bin status.
+*   **Predictive Operations**: Sensors alert the system *before* overflow occurs ("Warning" state), allowing proactive collection.
+*   **Inclusive Technology**: Added **Multilingual Voice & UI Support** (8 Indian languages) so drivers of all linguistic backgrounds can use the system effectively.
+*   **Gamification**: Introduced a **Leaderboard** to motivate drivers and track performance, addressing the lack of incentives in the sector.
+
+## 🏗️ Architecture Design
+
+The system connects IoT hardware (Smart Bins) with a Cloud Backend and a User-Facing Application Layer.
+
+![System Architecture](assets/architecture.png)
+
 ## 🌟 Key Features
 
 *   **📍 Live Fleet Tracking**: Real-time visualization of garbage collection trucks on an interactive map using Ola Maps & MapLibre GL.
@@ -28,7 +50,7 @@ Follow these steps to set up the project locally.
 
 *   A code editor (VS Code recommended)
 *   A modern web browser
-*   **Firebase Account**: scalable real-time database.
+*   **Firebase Account**: scalable real-time Realtime Database.
 *   **Ola Maps API Key**: for map tiles.
 
 ### Installation

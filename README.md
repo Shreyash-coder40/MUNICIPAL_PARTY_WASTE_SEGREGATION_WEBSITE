@@ -85,10 +85,11 @@ Follow these steps to set up the project locally.
 ## 📂 Project Structure
 
 ```
-├── index.html      # Main HTML structure
-├── style.css       # Global styles and responsive design
-├── script.js       # Main logic (Firebase, Maps, UI)
-└── README.md       # Project documentation
+├── index.html          # Main HTML structure
+├── style.css           # Global styles and responsive design
+├── script.js           # Main logic (Firebase, Maps, UI)
+├── smart_bin_code.ino  # ESP32 firmware for Smart Bins
+└── README.md           # Project documentation
 ```
 
 ## 🤝 Contributing

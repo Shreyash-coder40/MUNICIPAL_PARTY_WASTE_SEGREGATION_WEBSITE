@@ -85,11 +85,14 @@ Follow these steps to set up the project locally.
 ## 📂 Project Structure
 
 ```
-├── index.html          # Main HTML structure
-├── style.css           # Global styles and responsive design
-├── script.js           # Main logic (Firebase, Maps, UI)
-├── smart_bin_code.ino  # ESP32 firmware for Smart Bins
-└── README.md           # Project documentation
+├── Municipal Party Website   # Main Admin Dashboard & Bin Monitoring
+│   ├── index.html
+│   ├── style.css
+│   ├── script.js
+│   └── smart_bin_code.ino
+├── Driver Website            # Driver Navigation App
+├── Waste distribution Codes  # Additional sorting logic
+└── README.md                 # Project documentation
 ```
 
 ## 🤝 Contributing

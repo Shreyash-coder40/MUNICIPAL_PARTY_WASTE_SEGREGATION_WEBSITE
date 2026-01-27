@@ -24,7 +24,21 @@ The system connects IoT hardware (Smart Bins) with a Cloud Backend and a User-Fa
 
 ![System Architecture](assets/architecture.png)
 
-## 🌟 Key Features
+## 💻 User Interface
+
+### 1. Global Command Dashboard
+A centralized view for monitoring all trucks, route efficiency, and real-time alerts.
+![English Dashboard](assets/dashboard_english.png)
+
+### 2. Inclusive Multilingual Support
+To empower local drivers, the entire interface (including voice navigation) can be instantly toggled between **8 Indian languages** (Hindi, Marathi, Gujarati, etc.).
+![Multilingual Dashboard](assets/dashboard_multilingual.png)
+
+### 3. 🎙️ Voice Command System
+The system features an integrated **Voice Assistant** that:
+*   Announces critical alerts (e.g., "Bin 4 is Critical").
+*   Confirms actions like "Dispatching Fleet".
+*   Allows hands-free theme and language toggling for drivers on the go.
 
 *   **📍 Live Fleet Tracking**: Real-time visualization of garbage collection trucks on an interactive map using Ola Maps & MapLibre GL.
 *   **🗑️ Smart Bin Monitoring**: Live status of waste bins, categorizing them into 'Normal', 'Warning', and 'Critical' based on fill levels.

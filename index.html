@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Eco-Command | Municipal Waste Management System</title>
+    
+    <!-- External Libraries -->
+    <link href="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="spinner"></div>
+        <div class="loading-text" id="loadingText">Initializing Eco-Command</div>
+        <div class="loading-subtext" id="loadingSubtext">Connecting to municipal network...</div>
+    </div>
+
+    <!-- Header / Navbar -->
+    <header class="header">
+        <div class="brand">
+            <div class="logo">EC</div>
+            <div class="brand-info">
+                <h1>Eco-Command</h1>
+                <div class="subtitle">Municipal Waste Management</div>
+            </div>
+        </div>
+
+        <div class="header-controls">
+            <!-- Language Selector -->
+            <div class="lang-selector">
+                <button class="control-btn" id="langBtn">
+                    <i class="fas fa-globe"></i>
+                    <span id="currentLang">English</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="lang-dropdown" id="langDropdown">
+                    <div class="lang-option active" data-lang="en">
+                        <span>🇺🇸</span>
+                        <span>English</span>
+                    </div>
+                    <div class="lang-option" data-lang="hi">
+                        <span>🇮🇳</span>
+                        <span>हिंदी (Hindi)</span>
+                    </div>
+                    <div class="lang-option" data-lang="mr">
+                        <span>🇮🇳</span>
+                        <span>मराठी (Marathi)</span>
+                    </div>
+                    <div class="lang-option" data-lang="gu">
+                        <span>🇮🇳</span>
+                        <span>ગુજરાતી (Gujarati)</span>
+                    </div>
+                    <div class="lang-option" data-lang="ta">
+                        <span>🇮🇳</span>
+                        <span>தமிழ் (Tamil)</span>
+                    </div>
+                    <div class="lang-option" data-lang="te">
+                        <span>🇮🇳</span>
+                        <span>తెలుగు (Telugu)</span>
+                    </div>
+                    <div class="lang-option" data-lang="bn">
+                        <span>🇮🇳</span>
+                        <span>বাংলা (Bengali)</span>
+                    </div>
+                    <div class="lang-option" data-lang="kn">
+                        <span>🇮🇳</span>
+                        <span>ಕನ್ನಡ (Kannada)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Theme Toggle -->
+            <button class="control-btn" id="themeBtn">
+                <i class="fas fa-moon" id="themeIcon"></i>
+                <span id="themeText">Dark</span>
+            </button>
+
+            <!-- Leaderboard Button -->
+            <button class="control-btn" id="leaderboardBtn">
+                <i class="fas fa-trophy"></i>
+                <span>Leaderboard</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Map Card -->
+        <div class="map-card" id="mapCard">
+            <div class="map-card-header">
+                <div class="map-card-title" id="mapCardTitle">Live Fleet Tracking</div>
+                <div class="map-card-controls">
+                    <button class="map-control-btn" id="fullscreenBtn">
+                        <i class="fas fa-expand" id="fullscreenIcon"></i>
+                        <span id="fullscreenText">Full Screen</span>
+                    </button>
+                </div>
+            </div>
+            <div id="map"></div>
+        </div>
+
+        <!-- Controls Section -->
+        <div class="controls-section">
+            <div class="controls-header" id="controlsHeader">Fleet Operations</div>
+            <div class="controls-buttons">
+                <button class="action-btn action-btn-secondary" id="voiceBtn">
+                    <i class="fas fa-microphone" id="voiceIcon"></i>
+                    <span id="voiceText">Voice Assistance</span>
+                </button>
+                <button class="action-btn action-btn-primary" id="dispatchBtn">
+                    <i class="fas fa-truck"></i>
+                    <span id="dispatchBtnText">Dispatch Fleet</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Bins Section -->
+        <div class="bins-section">
+            <div class="bins-header" id="binsHeader">Waste Bins Status</div>
+            <div class="bins-grid" id="binsGrid">
+                <!-- Bin cards will be inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Leaderboard Sidebar -->
+    <aside class="sidebar-panel" id="leaderboardPanel">
+        <div class="panel-header">
+            <div class="panel-title" id="panelTitle">Live Leaderboard</div>
+            <button class="close-btn" id="closeSidebar">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="panel-content" id="leaderboardContent">
+            <!-- Leaderboard items will be inserted here -->
+        </div>
+    </aside>
+
+    <!-- Notification -->
+    <div class="notification" id="notification">
+        <i class="fas fa-bell notification-icon" id="notificationIcon"></i>
+        <div class="notification-content">
+            <div class="notification-title" id="notificationTitle">System Online</div>
+            <div class="notification-message" id="notificationMessage">All systems operational</div>
+        </div>
+    </div>
+
+    <!-- External Libraries -->
+    <script src="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.js"></script>
+    
+    <!-- Local JavaScript -->
+    <script type="module" src="script.js"></script>
+</body>
+
+</html>

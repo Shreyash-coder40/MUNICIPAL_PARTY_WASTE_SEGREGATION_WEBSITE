@@ -20,11 +20,28 @@
 
 ## 🚧 Problem Statement
 
-Rapid urbanization has led to inefficient waste management systems characterized by:
-*   **Overflowing Bins**: Leading to health hazards and poor sanitation.
-*   **Inefficient Routing**: Collection trucks follow fixed routes regardless of bin fill levels, ensuring fuel and time wastage.
-*   **Lack of Visibility**: Authorities have no real-time tracking of where trucks are or which bins are missed.
-*   **Communication Gaps**: Language barriers between drivers and control centers often lead to operational delays.
+The rapid acceleration of urbanization has placed immense pressure on existing municipal waste monitoring infrastructures, leading to a critical breakdown in sanitation management. Traditional methods are reactive, static, and inefficient, resulting in severe environmental and operational challenges.
+
+### 🔴 1. The "Blind Spot" Crisis (Overflow & Sanitation)
+Municipalities lack real-time visibility into the status of waste bins.
+*   **Consequence**: Bins overflow for hours before scheduled pickup, creating health hazards, foul odors, and attracting pests.
+*   **Impact**: Public dissatisfaction and high risk of disease proliferation.
+
+![Problem - Overflow](assets/problem_overflow.png)
+*Figure 1: Illustration of unchecked bin overflow causing sanitation failure.*
+
+### 📉 2. Operational Inefficiency (Looping Routes)
+Trucks follow rigid, pre-planned rudimentary routes regardless of actual demand.
+*   **Consequence**: Fuel is wasted collecting empty bins, while critical full bins are missed.
+*   **Impact**: Increased carbon footprint and 40% higher operational costs due to inefficient logistics.
+
+![Problem - Inefficient Routing](assets/problem_routing.png)
+*Figure 2: Contrast between inefficient static routing vs. optimized dynamic routing.*
+
+### 🗣️ 3. The Communication Barrier
+A diverse workforce often struggles with language barriers between control center dispatchers and ground-level drivers.
+*   **Consequence**: Misunderstandings lead to missed pickups and delayed re-routing.
+*   **Impact**: Operational friction, reduced driver morale, and slower response times.
 
 ## 🎯 Gaps We Covered
 

@@ -26,9 +26,29 @@ The system connects IoT hardware (Smart Bins) with a Cloud Backend and a User-Fa
 
 ---
 
-# 🏙️ Theme 1: Municipal Website (Admin Dashboard)
+# 🤖 Theme 1: Smart Dustbin (AI Segregation)
 
-The central command hub for managing fleet operations and monitoring city-wide cleanliness.
+An intelligent waste scanning and sorting unit that automates segregation at the source.
+
+### ⚙️ How It Works
+1.  **AI Scanning**: A camera scans the waste item held in front of it.
+2.  **Object Detection**: The system uses a trained AI model (TensorFlow/Keras) to classify the waste as **Organic**, **Dry**, or **Plastic**.
+3.  **Automatic Sorting**: Servos actuate a ramp and lid mechanism to drop the waste into the correct underlying compartment.
+
+### 📸 Prototype Model
+![Smart Dustbin Model](assets/smart_bin_model.jpg)
+
+### 🛠️ Hardware & Tech
+*   **ESP32 / Arduino**: For controlling servos and sensors.
+*   **Ultrasonic Sensors**: To measure fill levels of the individual compartments.
+*   **Python (OpenCV + TensorFlow)**: For real-time image recognition and classification.
+*   **Servo Motors**: For the physical segregation mechanism.
+
+---
+
+# 🏙️ Theme 2: Municipal Website (Admin Dashboard)
+
+The central command hub for monitoring bin fill levels (automatically detected by sensors) and managing fleet operations.
 
 ### 💻 User Interface
 
@@ -54,33 +74,6 @@ The system features an integrated **Voice Assistant** that commands, confirms, a
 
 ---
 
-# 🤖 Theme 2: Smart Dustbin (AI Segregation)
-
-An intelligent waste scanning and sorting unit that automates segregation at the source.
-
-### ⚙️ How It Works
-1.  **AI Scanning**: A camera scans the waste item held in front of it.
-2.  **Object Detection**: The system uses a trained AI model (TensorFlow/Keras) to classify the waste as **Organic**, **Dry**, or **Plastic**.
-3.  **Automatic Sorting**: Servos actuate a ramp and lid mechanism to drop the waste into the correct underlying compartment.
-
-### 📸 Prototype Model
-![Smart Dustbin Model](assets/smart_bin_model.jpg)
-
-### 🛠️ Hardware & Tech
-*   **ESP32 / Arduino**: For controlling servos and sensors.
-*   **Ultrasonic Sensors**: To measure fill levels of the individual compartments.
-*   **Python (OpenCV + TensorFlow)**: For real-time image recognition and classification.
-*   **Servo Motors**: For the physical segregation mechanism.
-
----
-
-# 🚚 Theme 3: Driver Website
-
-*(Coming Soon...)*
-This section will detail the driver-side application for navigation, route optimization, and task management.
-
----
-
 ## 🛠️ Global Tech Stack
 
 *   **Frontend**: HTML5, CSS3, JavaScript (ES6+)
@@ -97,7 +90,6 @@ This section will detail the driver-side application for navigation, route optim
 │   ├── style.css
 │   ├── script.js
 │   └── smart_bin_code.ino
-├── Driver Website            # Driver Navigation App
 ├── Waste distribution Codes  # AI Segregation Logic (Python + Arduino)
 ├── assets                    # Images and Diagrams
 └── README.md                 # Project documentation

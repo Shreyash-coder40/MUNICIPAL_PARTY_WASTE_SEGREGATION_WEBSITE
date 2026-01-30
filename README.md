@@ -22,7 +22,39 @@ This project bridges key gaps in traditional waste management:
 
 The system connects IoT hardware (Smart Bins) with a Cloud Backend and a User-Facing Application Layer.
 
-![System Architecture](assets/architecture.png)
+```mermaid
+graph TD
+    subgraph IoT_Layer [Theme 1: Smart Dustbin]
+        direction TB
+        ESP[ESP32 Controller]
+        CAM[Camera Module\nAI Classification]
+        US[Ultrasonic Sensors\nFill Level]
+        SER[Servo Motors\nSegregation]
+        
+        ESP --> CAM
+        ESP --> US
+        ESP --> SER
+    end
+    
+    subgraph Cloud_Layer [Cloud Backend]
+        RTDB[(Firebase Realtime DB)]
+    end
+    
+    subgraph App_Layer [Theme 2: Municipal Website]
+        direction TB
+        DB[Admin Dashboard]
+        MAP[Ola Maps / MapLibre]
+        VUI[Voice Assistant\nMultilingual]
+        
+        DB --> MAP
+        DB --> VUI
+    end
+    
+    %% Data Flow
+    ESP -- "1. Uploads Bin Status\n(Normal/Warning/Critical)" --> RTDB
+    RTDB -- "2. Syncs Real-Time Data" --> DB
+    DB -- "3. Dispatch Fleet" --> RTDB
+```
 
 ---
 

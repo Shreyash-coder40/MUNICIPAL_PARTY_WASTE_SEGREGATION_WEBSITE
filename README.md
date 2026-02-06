@@ -169,7 +169,9 @@ The system features an integrated **Voice Assistant** that commands, confirms, a
 
 ## 👥 Contributors
 
-*   **Shreyash-coder40** - *Lead Developer & Architect*
+*   **Shreyash-coder40** - *Developer & Architect*
+*   **Keshav0459-prog** - *Developer + UI/UX Designer*
+*   **daminsahu697-debug** - *Developer + IOT Expert*
 
 ## 📄 License
 

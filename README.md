@@ -28,7 +28,7 @@ Municipalities lack real-time visibility into the status of waste bins.
 *   **Consequence**: Bins overflow for hours before scheduled pickup, creating health hazards, foul odors, and attracting pests.
 *   **Impact**: Public dissatisfaction and high risk of disease proliferation.
 
-![Problem - Overflow](assets/problem_overflow.png)
+<img src="assets/problem_overflow.png" width="300">
 *Figure 1: Illustration of unchecked bin overflow causing sanitation failure.*
 
 ### 📉 2. Operational Inefficiency (Looping Routes)
@@ -36,7 +36,7 @@ Trucks follow rigid, pre-planned rudimentary routes regardless of actual demand.
 *   **Consequence**: Fuel is wasted collecting empty bins, while critical full bins are missed.
 *   **Impact**: Increased carbon footprint and 40% higher operational costs due to inefficient logistics.
 
-![Problem - Inefficient Routing](assets/problem_routing.png)
+<img src="assets/problem_routing.png" width="300">
 *Figure 2: Contrast between inefficient static routing vs. optimized dynamic routing.*
 
 ### 🗣️ 3. The Communication Barrier
@@ -102,7 +102,7 @@ An intelligent waste scanning and sorting unit that automates segregation at the
 3.  **Automatic Sorting**: Servos actuate a ramp and lid mechanism to drop the waste into the correct underlying compartment.
 
 ### 📸 Prototype Model
-![Smart Dustbin Model](assets/smart_bin_model.jpg)
+<img src="assets/smart_bin_model.jpg" width="300">
 
 ### 🛠️ Hardware & Tech
 *   **ESP32 / Arduino**: For controlling servos and sensors.

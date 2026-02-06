@@ -1,4 +1,4 @@
-![Project Banner](assets/project_banner.png)
+
 
 # Eco-Command | Municipal Waste Management System
 

@@ -14,6 +14,7 @@
 - [Municipal Dashboard](#-theme-2-municipal-website-admin-dashboard)
 - [Tech Stack](#-global-tech-stack)
 - [Getting Started](#-getting-started)
+- [Demo](#-video-demo)
 
 - [Contributors](#-contributors)
 - [License](#-license)
@@ -165,6 +166,13 @@ The system features an integrated **Voice Assistant** that commands, confirms, a
 1.  **Clone the Repo**: `git clone https://github.com/Shreyash-coder40/MUNICIPAL_PARTY_WASTE_SEGREGATION_WEBSITE.git`
 2.  **Web Dashboard**: Open `Municipal Party Website/index.html`.
 3.  **Smart Bin**: Upload the `.ino` code to your ESP32 and run `main.py` for the AI vision system.
+
+## 🎥 Video Demo
+
+Watch the full working prototype and system walkthrough here:
+
+[![Watch the video](https://img.youtube.com/vi/Ys-yf6mtv4s/maxresdefault.jpg)](https://youtu.be/Ys-yf6mtv4s)
+
 
 
 ## 👥 Contributors

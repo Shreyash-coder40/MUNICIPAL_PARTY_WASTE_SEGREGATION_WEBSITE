@@ -1,4 +1,7 @@
+![Project Banner](assets/project_banner.png)
+
 # Eco-Command | Municipal Waste Management System
+
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 ![Build Status](https://img.shields.io/badge/Build-Passing-brightgreen)
@@ -14,6 +17,7 @@
 - [Municipal Dashboard](#-theme-2-municipal-website-admin-dashboard)
 - [Tech Stack](#-global-tech-stack)
 - [Getting Started](#-getting-started)
+- [Future Roadmap](#-future-roadmap)
 - [Demo](#-video-demo)
 
 - [Contributors](#-contributors)
@@ -163,9 +167,74 @@ The system features an integrated **Voice Assistant** that commands, confirms, a
 
 ## 🚀 Getting Started
 
-1.  **Clone the Repo**: `git clone https://github.com/Shreyash-coder40/MUNICIPAL_PARTY_WASTE_SEGREGATION_WEBSITE.git`
-2.  **Web Dashboard**: Open `Municipal Party Website/index.html`.
-3.  **Smart Bin**: Upload the `.ino` code to your ESP32 and run `main.py` for the AI vision system.
+### 📋 Prerequisites
+
+**Hardware:**
+*   ESP32 Development Board
+*   Camera Module (OV2640 or similar)
+*   Servo Motors (x2 for segregation)
+*   Ultrasonic Sensors (HC-SR04)
+*   Jumper Wires & Breadboard
+
+**Software:**
+*   Python 3.8+
+*   Arduino IDE
+*   Visual Studio Code (recommended)
+
+### 🔌 Hardware Connection
+
+| Component | ESP32 Pin | Description |
+| :--- | :--- | :--- |
+| **Servo 1 (Gate)** | Pin 13 | Controls the main waste entry gate |
+| **Servo 2 (Sorter)** | Pin 12 | Directs waste to correct bin |
+| **Ultrasonic Trig** | Pin 5 | Distance measurement trigger |
+| **Ultrasonic Echo** | Pin 18 | Distance measurement echo |
+| **Camera TX/RX** | Pin 1/3 | Serial communication |
+
+### ⚙️ Installation & Setup
+
+1.  **Clone the Repository**
+    ```bash
+    git clone https://github.com/Shreyash-coder40/MUNICIPAL_PARTY_WASTE_SEGREGATION_WEBSITE.git
+    cd MUNICIPAL_PARTY_WASTE_SEGREGATION_WEBSITE
+    ```
+
+2.  **Web Dashboard Setup**
+    *   Navigate to `Municipal Party Website/`.
+    *   Open `index.html` in your browser.
+    *   *Note: Ensure you have an active internet connection for Firebase and Maps API to load.*
+
+3.  **AI System Setup**
+    *   It is recommended to use a virtual environment:
+        ```bash
+        python -m venv venv
+        # Windows
+        .\venv\Scripts\activate
+        # Mac/Linux
+        source venv/bin/activate
+        ```
+    *   Install dependencies:
+        ```bash
+        pip install -r requirements.txt
+        ```
+    *   **⚠️ Note**: The `main.py` script requires `keras_model.h5` and `labels.txt` to function. Please ensure these files are placed in the root directory (currently missing from repo).
+
+4.  **Hardware & Firmware**
+    *   Open `waste_segregation.ino` in Arduino IDE.
+    *   Select your board (ESP32 Dev Module) and COM port.
+    *   Upload the code.
+
+5.  **Run the System**
+    ```bash
+    python "Waste distribution Codes/main.py"
+    ```
+
+## 🔮 Future Roadmap
+
+*   [ ] **Drone Surveillance**: Integration with autonomous drones for aerial monitoring of illegal dumping zones.
+*   [ ] **Solar Power Grid**: Making all smart bins self-sufficient using solar panels.
+*   [ ] **Public Mobile App**: A citizen-facing app to report overflowing bins and earn "Green Points".
+*   [ ] **Blockchain Integration**: For transparent auditing of waste disposal data.
 
 ## 🎥 Video Demo
 

@@ -127,7 +127,7 @@ To empower local drivers, the entire interface (including voice navigation) can 
 
 #### 3. 🎙️ Voice Command System
 The system features an integrated **Voice Assistant** that commands, confirms, and alerts:
-*   **Alerts**: "Bin 4 is Critical"
+*   **Alerts**: "Bin 3 is Critical"
 *   **Confirmation**: "Dispatching Fleet to Andheri East"
 *   **Control**: Toggles themes or languages via voice.
 

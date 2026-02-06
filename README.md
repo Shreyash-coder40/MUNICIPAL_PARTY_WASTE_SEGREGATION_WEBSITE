@@ -171,7 +171,7 @@ The system features an integrated **Voice Assistant** that commands, confirms, a
 
 Watch the full working prototype and system walkthrough here:
 
-[![Watch the video](https://img.youtube.com/vi/Ys-yf6mtv4s/hqdefault.jpg)](https://youtu.be/Ys-yf6mtv4s)
+[![Watch the video](assets/video_demo_with_play.jpg)](https://youtu.be/Ys-yf6mtv4s)
 
 
 
